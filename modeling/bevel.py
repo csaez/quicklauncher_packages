@@ -1,0 +1,1 @@
+Application.ApplyTopoOp("BevelComponent")
