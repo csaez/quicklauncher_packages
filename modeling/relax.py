@@ -1,1 +1,1 @@
-Application.ApplyOp("Relax")
+Application.InspectObj(Application.ApplyOp("Relax"))

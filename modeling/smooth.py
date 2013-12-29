@@ -1,1 +1,1 @@
-Application.ApplyOp("Smooth")
+Application.InspectObj(Application.ApplyOp("Smooth"))

@@ -1,1 +1,1 @@
-Application.ApplyOp("ShrinkWrap")
+Application.InspectObj(Application.ApplyOp("ShrinkWrap"))

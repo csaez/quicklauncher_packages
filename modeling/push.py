@@ -1,1 +1,1 @@
-Application.ApplyOp("Push")
+Application.InspectObj(Application.ApplyOp("Push"))

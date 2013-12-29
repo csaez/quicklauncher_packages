@@ -1,1 +1,1 @@
-Application.ApplyTopoOp("BevelComponent")
+Application.InspectObj(Application.ApplyTopoOp("BevelComponent"))
