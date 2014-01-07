@@ -47,6 +47,9 @@ class BatchSelection(QDialog):
         code += "for i, obj in enumerate(sisel):\n    "
         code += str(self.code_plainTextEdit.toPlainText()).replace(
             "\n", "\n    ")
-        exec(code)
+        try:
+            exec(code)
+        except Exception as err:
+            log(err, C.siError)
 
 show_qt(BatchSelection)
