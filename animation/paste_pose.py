@@ -11,4 +11,7 @@ if hasattr(quicklauncher, "copy_pose_from"):
         closest = sorted(target, key=lambda t: ratio(x.FullName, t))[-1]
         target.remove(closest)
         for p, v in quicklauncher.copy_pose_from.get(closest).iteritems():
-            x.Kinematics.Local.Parameters(p).Value = v
+            try:
+                x.Kinematics.Local.Parameters(p).Value = v
+            except:
+                print "Warning: cannot override " + x.FullName + "." + p
