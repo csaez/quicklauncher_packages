@@ -18,7 +18,7 @@ class BatchSelection(QDialog):
         self.verticalLayout.setMargin(6)
         self.forloop_label = QtGui.QLabel(self)
         self.forloop_label.setText(
-            "from wishlib.si import *\nfor i, obj in enumerate(sisel):")
+            "from wishlib.si import *\nfor i, obj in enumerate(list(sisel)):")
         self.verticalLayout.addWidget(self.forloop_label)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.indent_label = QtGui.QLabel(self)
@@ -44,7 +44,7 @@ class BatchSelection(QDialog):
 
     def execute_clicked(self):
         code = "from wishlib.si import *\n\n"
-        code += "for i, obj in enumerate(sisel):\n    "
+        code += "for i, obj in enumerate(list(sisel)):\n    "
         code += str(self.code_plainTextEdit.toPlainText()).replace(
             "\n", "\n    ")
         try:
