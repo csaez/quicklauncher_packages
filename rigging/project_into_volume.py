@@ -21,7 +21,7 @@ def project_volume(max_depth=2):
         if position == (0, 0, 0):
             break
         results.append(position)
-        position = [p + direction[i] * 0.001 for i, p in enumerate(position)]
+        position = [p + (direction[i] * 0.001) for i, p in enumerate(position)]
     # sum and return average
     return [sum(coord) / len(coord) for i, coord in enumerate(zip(*results))]
 
