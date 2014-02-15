@@ -1,10 +1,9 @@
 import sys
-from PyQt4 import QtGui
-from wishlib.qt.QtGui import QDialog
+from wishlib.qt import QtGui, widgets
 from wishlib.si import sianchor, si
 
 
-class HardReload(QDialog):
+class HardReload(widgets.QDialog):
 
     def __init__(self, parent=None):
         super(HardReload, self).__init__(parent)

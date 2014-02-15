@@ -1,9 +1,8 @@
-from PyQt4 import QtCore, QtGui
-from wishlib.qt.QtGui import QDialog
+from wishlib.qt import QtCore, QtGui, widgets
 from wishlib.si import *
 
 
-class BatchSelection(QDialog):
+class BatchSelection(widgets.QDialog):
 
     def __init__(self, parent=None):
         super(BatchSelection, self).__init__(parent)

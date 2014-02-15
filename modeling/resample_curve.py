@@ -1,6 +1,5 @@
 from wishlib.si import si, sisel, sianchor
-from PyQt4.QtGui import QInputDialog
-from wishlib.qt.QtGui import QDialog
+from wishlib.qt import QtGui, widgets
 
 
 def get_positions(in_curve, in_segs):
@@ -21,8 +20,9 @@ def resample_curve(in_curve, in_segs):
     return curve
 
 
-parent = QDialog(sianchor())
-segs, ok = QInputDialog.getInteger(parent, "Resample Curve", "Segments", 3)
+parent = widgets.QDialog(sianchor())
+segs, ok = QtGui.QInputDialog.getInteger(
+    parent, "Resample Curve", "Segments", 3)
 if ok:
     sel = list()
     result = list()
