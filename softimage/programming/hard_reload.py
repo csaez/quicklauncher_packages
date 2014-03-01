@@ -1,9 +1,9 @@
 import sys
-from wishlib.qt import QtGui, widgets
-from wishlib.si import sianchor, si
+from wishlib.qt import QtGui
+from wishlib.si import show_qt, si
 
 
-class HardReload(widgets.QDialog):
+class HardReload(QtGui.QDialog):
 
     def __init__(self, parent=None):
         super(HardReload, self).__init__(parent)
@@ -31,5 +31,5 @@ class HardReload(widgets.QDialog):
         super(HardReload, self).close(*args, **kwds)
 
 
-HardReload(sianchor()).exec_()
+show_qt(HardReload, modal=True)
 si.UpdatePlugins()
