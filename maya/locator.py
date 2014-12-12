@@ -1,3 +1,3 @@
-import pymel.core as pm
+from maya import cmds
 
-pm.spaceLocator()
+cmds.spaceLocator()

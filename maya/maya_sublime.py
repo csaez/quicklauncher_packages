@@ -1,11 +1,12 @@
-from maya import cmds
+def open_port(port):
+    from maya import cmds
+    # close port
+    try:
+        # if it was already open under another configuration
+        cmds.commandPort(name=port, close=True)
+    except RuntimeError:
+        pass
+    cmds.commandPort(name=port, sourceType="python")
+    # cmds.commandPort(name=":10000", sourceType="mel")
 
-# if it was already open under another configuration
-cmds.commandPort(name="127.0.0.1:7002", close=True)
-
-# now open a new port
-cmds.commandPort(name="127.0.0.1:7002", sourceType="python")
-
-# or open some random MEL port (make sure you change it to this port in
-# your config file)
-cmds.commandPort(name="127.0.0.1:10000", sourceType="mel")
+open_port("127.0.0.1:7002")
