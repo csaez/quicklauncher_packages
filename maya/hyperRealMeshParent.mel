@@ -472,7 +472,4 @@ global proc string[] hyperRealMeshParent()
 	return( $return );
 }
 
-
-hyperRealMeshParent();
-
 //eof
